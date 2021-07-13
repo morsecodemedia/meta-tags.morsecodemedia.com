@@ -7,6 +7,7 @@
             <v-text-field
               v-model="metaTitle"
               :counter="60"
+              :rules="metaTitleRules"
               label="Meta Title"
               filled
               persistent-hint
