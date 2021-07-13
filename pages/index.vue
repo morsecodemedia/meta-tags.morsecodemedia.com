@@ -53,7 +53,7 @@ export default {
     return {
       metaTitle: 'Meta Titles | a morsecodemedia tool.',
       metaTitleRules: [v => v.length <= 60 || 'Ideal meta titles are less than 60 characters'],
-      metaDescription: 'A page to check character count and preview meta tags in various scenarios.',
+      metaDescription: 'A page to check character count and preview meta tags in various scenarios. A page to check character count and preview meta tags in various scenarios. A page to check character count and preview meta tags in various scenarios.',
       metaDescriptionRules: [v => v.length <= 160 || 'Ideal meta descriptions are less than 160 characters'],
       url: 'https://meta-tags.morsecodemedia.com'
     }
@@ -130,11 +130,12 @@ export default {
       color: #545454;
       font-size: 13px;
       line-height: 1.4;
-      word-wrap: break-word;
-      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: break-word;
       max-width: 160ch;
+      height: 36px;
       display: block;
     }
   }
