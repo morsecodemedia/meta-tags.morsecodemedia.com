@@ -41,6 +41,14 @@
             </div>
             <span class="google-description">{{ googleTruncatedMetaDescription }}</span>
           </v-card>
+
+          <v-card class="card card-facebook">
+            <v-card-subtitle>Facebook</v-card-subtitle>
+            <v-skeleton-loader type="image" />
+            <span class="facebook-url-title">{{ url }}</span>
+            <span class="facebook-title">{{ metaTitle }}</span>
+            <span class="facebook-description">{{ metaDescription }}</span>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -60,13 +68,13 @@ export default {
       url: 'https://meta-tags.morsecodemedia.com'
     }
   },
-  mounted () {
-    this.googleMeta()
-  },
   watch: {
     metaDescription () {
       this.googleMeta()
     }
+  },
+  mounted () {
+    this.googleMeta()
   },
   methods: {
     googleMeta () {
