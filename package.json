@@ -1,20 +1,16 @@
 {
-  "name": "nuxt-template",
+  "name": "meta-tags.morsecodemedia.com",
   "version": "1.0.0",
-  "description": "A template to start Nuxt projects, loaded with all the additional modules that are used in almost all of our projects.",
-  "author": "A morsecodemedia/tomasino project",
-  "contributors": [
-    {
-      "name": "Brandon Morse",
-      "email": "brandon@morsecodemedia.com",
-      "url": "https://github.com/morsecodemedia"
-    },
-    {
-      "name": "James Tomasino",
-      "email": "james@tomasino.org",
-      "url": "https://github.com/jamestomasino"
-    }
-  ],
+  "description": "A page to check character count and preview meta tags in various scenarios.",
+  "author": "brandonmorse <brandon@morsecodemedia.com> (https://www.morsecodemedia.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morsecodemedia/meta-tags.morsecodemedia.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/morsecodemedia/meta-tags.morsecodemedia.com/issues"
+  },
+  "homepage": "https://github.com/morsecodemedia/meta-tags.morsecodemedia.com/blob/master/README.md",
   "private": true,
   "scripts": {
     "dev": "nuxt",
