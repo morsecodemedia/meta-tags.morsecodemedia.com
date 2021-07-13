@@ -38,7 +38,7 @@
               <span class="google-url-title">{{ url }}</span>
               <span class="google-url-arrow" />
             </div>
-            <span class="google-description">{{ metaDescription }}</span>
+            <span class="google-description">{{ googleTruncatedMetaDescription }}</span>
           </v-card>
         </v-col>
       </v-row>
@@ -53,9 +53,27 @@ export default {
     return {
       metaTitle: 'Meta Titles | a morsecodemedia tool.',
       metaTitleRules: [v => v.length <= 60 || 'Ideal meta titles are less than 60 characters'],
-      metaDescription: 'A page to check character count and preview meta tags in various scenarios. A page to check character count and preview meta tags in various scenarios. A page to check character count and preview meta tags in various scenarios.',
+      metaDescription: 'A page to check character count and preview meta tags in various scenarios.',
       metaDescriptionRules: [v => v.length <= 160 || 'Ideal meta descriptions are less than 160 characters'],
+      googleTruncatedMetaDescription: '',
       url: 'https://meta-tags.morsecodemedia.com'
+    }
+  },
+  mounted () {
+    this.googleMeta()
+  },
+  watch: {
+    metaDescription () {
+      this.googleMeta()
+    }
+  },
+  methods: {
+    googleMeta () {
+      if (this.metaDescription.length > 160) {
+        this.googleTruncatedMetaDescription = this.metaDescription.substring(0, 160) + '...'
+      } else {
+        this.googleTruncatedMetaDescription = this.metaDescription
+      }
     }
   },
   head () {
@@ -131,12 +149,7 @@ export default {
       font-size: 13px;
       line-height: 1.4;
       overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
       word-wrap: break-word;
-      max-width: 160ch;
-      height: 36px;
-      display: block;
     }
   }
 }
