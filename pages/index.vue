@@ -87,11 +87,11 @@ export default {
   },
   head () {
     return {
-      title: 'Meta Tags | A morsecodemedia tool',
+      title: 'Meta Tags | a morsecodemedia tool',
       meta: [
-        { hid: 'ogtitle', property: 'og:title', content: 'Meta Tags | A morsecodemedia tool' },
-        { hid: 'twtitle', name: 'twitter:title', content: 'Meta Tags | A morsecodemedia tool' },
-        { hid: 'googlename', itemprop: 'name', content: 'Meta Tags | A morsecodemedia tool' },
+        { hid: 'ogtitle', property: 'og:title', content: 'Meta Tags | a morsecodemedia tool' },
+        { hid: 'twtitle', name: 'twitter:title', content: 'Meta Tags | a morsecodemedia tool' },
+        { hid: 'googlename', itemprop: 'name', content: 'Meta Tags | a morsecodemedia tool' },
         { hid: 'description', name: 'description', content: 'A page to check character count and preview meta tags in various scenarios.' },
         { hid: 'ogdescription', property: 'og:description', content: 'A page to check character count and preview meta tags in various scenarios.' },
         { hid: 'twdescription', name: 'twitter:description', content: 'A page to check character count and preview meta tags in various scenarios.' },

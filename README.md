@@ -2,7 +2,7 @@
 A page to check character count and preview meta tags in various scenarios.
 
 ## Road Map
-### MVP (Release 1.0.0)
+### Release 1.0.0 (2021-07-13)
 Google Search Results Preview
 ### Release 2.0.0
 Facebook Card Preview
@@ -18,8 +18,8 @@ Pinterest Card Preview
 Slack Card Preview
 
 ## Other Tools
-[A11Y](https://a11y.morsecodemedia.com/) - Accessibility Notes, Checklists, Misc Resources
+[A11Y](https://a11y.morsecodemedia.com/) - Accessibility Notes, Checklists, Misc Resources.
 
-[Color Contrast Checker](https://ccc.morsecodemedia.com/) - WCAG 2.1 AA/AAA Color Contrast Checker for 2 colors
+[Color Contrast Checker](https://ccc.morsecodemedia.com/) - An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.
 
-[UTM Generator](https://utm-generator.morsecodemedia.com/) - Form to generate a functioning URL with appropriate UTM parameters
+[UTM Generator](https://utm-generator.morsecodemedia.com/) - Form to generate a functioning URL with appropriate UTM parameters.
