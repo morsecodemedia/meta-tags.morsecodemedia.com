@@ -11,6 +11,7 @@
               label="Meta Title"
               filled
               persistent-hint
+              @input="updateMetaTitle"
             />
             <v-textarea
               v-model="metaData.metaDescription"
@@ -22,11 +23,13 @@
               rows="4"
               row-height="4"
               no-resize
+              @input="updateMetaDescription"
             />
             <v-text-field
               v-model="metaData.url"
               label="URL"
               filled
+              @input="updateMetaURL"
             />
           </v-card>
         </v-col>
@@ -41,6 +44,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import GoogleCard from '~/components/google-card.vue'
 import FacebookCard from '~/components/facebook-card.vue'
 export default {
@@ -58,6 +62,23 @@ export default {
       },
       metaTitleRules: [v => v.length <= 60 || 'Ideal meta titles are less than 60 characters'],
       metaDescriptionRules: [v => v.length <= 160 || 'Ideal meta descriptions are less than 160 characters']
+    }
+  },
+  created () {
+    this.setMetaTitle(this.metaData.metaTitle)
+    this.setMetaDescription(this.metaData.metaDescription)
+    this.setMetaURL(this.metaData.url)
+  },
+  methods: {
+    ...mapMutations('meta', ['setMetaTitle', 'setMetaDescription', 'setMetaURL']),
+    updateMetaTitle (e) {
+      this.setMetaTitle(this.metaData.metaTitle)
+    },
+    updateMetaDescription (e) {
+      this.setMetaDescription(this.metaData.metaDescription)
+    },
+    updateMetaURL (e) {
+      this.setMetaURL(this.metaData.url)
     }
   },
   head () {
