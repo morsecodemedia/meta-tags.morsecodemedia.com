@@ -1,9 +1,9 @@
 <template>
   <v-card class="card card-google">
     <v-card-subtitle>Google</v-card-subtitle>
-    <span class="google-title">{{ metaData.metaTitle }}</span>
+    <span class="google-title">{{ metaTitle }}</span>
     <div class="google-url">
-      <span class="google-url-title">{{ metaData.url }}</span>
+      <span class="google-url-title">{{ metaURL }}</span>
       <span class="google-url-arrow" />
     </div>
     <span class="google-description">{{ googleTruncatedMetaDescription }}</span>
@@ -11,20 +11,16 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'GoogleCard',
-  props: {
-    metaData: {
-      type: Object,
-      required: true,
-      twoWay: true,
-      default: () => {}
-    }
-  },
   data () {
     return {
       googleTruncatedMetaDescription: ''
     }
+  },
+  computed: {
+    ...mapGetters('meta', ['metaTitle', 'metaDescription', 'metaURL'])
   },
   watch: {
     metaDescription () {
@@ -36,10 +32,10 @@ export default {
   },
   methods: {
     googleMeta () {
-      if (this.metaData.metaDescription.length > 160) {
-        this.googleTruncatedMetaDescription = this.metaData.metaDescription.substring(0, 160) + '...'
+      if (this.metaDescription.length > 160) {
+        this.googleTruncatedMetaDescription = this.metaDescription.substring(0, 160) + '...'
       } else {
-        this.googleTruncatedMetaDescription = this.metaData.metaDescription
+        this.googleTruncatedMetaDescription = this.metaDescription
       }
     }
   }

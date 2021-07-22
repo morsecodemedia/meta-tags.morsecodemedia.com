@@ -18,7 +18,7 @@
               :counter="160"
               label="Meta Description"
               :rules="metaDescriptionRules"
-              :value="metaDescription"
+              :value="metaData.metaDescription"
               filled
               rows="4"
               row-height="4"
@@ -35,8 +35,8 @@
         </v-col>
 
         <v-col md="6">
-          <GoogleCard :meta-data="metaData" />
-          <FacebookCard :meta-data="metaData" />
+          <GoogleCard />
+          <FacebookCard />
         </v-col>
       </v-row>
     </v-container>
@@ -104,6 +104,9 @@ export default {
 </script>
 
 <style lang="scss">
+.container {
+  max-width: 1000px;
+}
 .card {
   padding: 12px 16px;
   margin: 0 auto 25px;

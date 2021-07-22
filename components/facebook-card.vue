@@ -3,25 +3,21 @@
     <v-card-subtitle>Facebook</v-card-subtitle>
     <v-skeleton-loader type="image" class="facebook-image" />
     <div class="facebook-text">
-      <span class="facebook-url-title">{{ metaData.url }}</span>
+      <span class="facebook-url-title">{{ metaURL }}</span>
       <div class="facebook-content">
-        <span class="facebook-title">{{ metaData.metaTitle }}</span>
-        <span class="facebook-description">{{ metaData.metaDescription }}</span>
+        <span class="facebook-title">{{ metaTitle }}</span>
+        <span class="facebook-description">{{ metaDescription }}</span>
       </div>
     </div>
   </v-card>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'FacebookCard',
-  props: {
-    metaData: {
-      type: Object,
-      required: true,
-      twoWay: true,
-      default: () => {}
-    }
+  computed: {
+    ...mapGetters('meta', ['metaTitle', 'metaDescription', 'metaURL'])
   }
 }
 </script>
