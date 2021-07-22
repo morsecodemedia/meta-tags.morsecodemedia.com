@@ -3,7 +3,7 @@
     <v-card-subtitle>Facebook</v-card-subtitle>
     <v-skeleton-loader type="image" class="facebook-image" />
     <div class="facebook-text">
-      <span class="facebook-url-title">{{ metaURL }}</span>
+      <span class="facebook-url-title">{{ facebookURL }}</span>
       <div class="facebook-content">
         <span class="facebook-title">{{ metaTitle }}</span>
         <span class="facebook-description">{{ metaDescription }}</span>
@@ -16,8 +16,27 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'FacebookCard',
+  data () {
+    return {
+      facebookURL: ''
+    }
+  },
   computed: {
     ...mapGetters('meta', ['metaTitle', 'metaDescription', 'metaURL'])
+  },
+  watch: {
+    metaURL () {
+      this.facebookURLHostName()
+    }
+  },
+  mounted () {
+    this.facebookURLHostName()
+  },
+  methods: {
+    facebookURLHostName () {
+      const url = new URL(this.metaURL)
+      this.facebookURL = url.hostname
+    }
   }
 }
 </script>
