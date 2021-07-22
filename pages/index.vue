@@ -32,11 +32,34 @@
               @input="updateMetaURL"
             />
           </v-card>
+          <v-card class="card">
+            Google
+            <div class="inline">
+              OFF
+              <v-switch
+                v-model="googleSwitch"
+                inset
+              />
+              ON
+            </div>
+
+            <v-divider />
+
+            Facebook
+            <div class="inline">
+              OFF
+              <v-switch
+                v-model="facebookSwitch"
+                inset
+              />
+              ON
+            </div>
+          </v-card>
         </v-col>
 
         <v-col md="6">
-          <GoogleCard />
-          <FacebookCard />
+          <GoogleCard v-if="googleSwitch" />
+          <FacebookCard v-if="facebookSwitch" />
         </v-col>
       </v-row>
     </v-container>
@@ -61,7 +84,9 @@ export default {
         url: 'https://meta-tags.morsecodemedia.com'
       },
       metaTitleRules: [v => v.length <= 60 || 'Ideal meta titles are less than 60 characters'],
-      metaDescriptionRules: [v => v.length <= 160 || 'Ideal meta descriptions are less than 160 characters']
+      metaDescriptionRules: [v => v.length <= 160 || 'Ideal meta descriptions are less than 160 characters'],
+      googleSwitch: true,
+      facebookSwitch: true
     }
   },
   created () {
@@ -113,5 +138,14 @@ export default {
   .v-card__subtitle {
     padding: 0 16px 16px 0;
   }
+}
+.inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 150px;
+}
+.v-divider {
+  margin-bottom: 20px;
 }
 </style>

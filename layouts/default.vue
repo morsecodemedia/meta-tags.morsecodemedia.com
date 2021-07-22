@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <div id="skip">
       <a class="skip-main" href="#main">Skip to main content</a>
     </div>
