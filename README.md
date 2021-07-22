@@ -4,9 +4,9 @@ A page to check character count and preview meta tags in various scenarios.
 ## Road Map
 ### Release 1.0.0 (2021-07-13)
 Google Search Results Preview
-### Release 2.0.0
+### Release 2.0.0 (2021-07-22)
 Facebook Card Preview
-### Release 2.5.0
+### Release 2.5.0 (2021-07-22)
 Preview Options Toggles
 ### Release 3.0.0
 Twitter Card Preview
