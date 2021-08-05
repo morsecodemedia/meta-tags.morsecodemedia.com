@@ -60,6 +60,7 @@
         <v-col md="6">
           <GoogleCard v-if="googleSwitch" />
           <FacebookCard v-if="facebookSwitch" />
+          <TwitterCard v-if="twitterSwitch" />
         </v-col>
       </v-row>
     </v-container>
@@ -70,11 +71,13 @@
 import { mapMutations } from 'vuex'
 import GoogleCard from '~/components/google-card.vue'
 import FacebookCard from '~/components/facebook-card.vue'
+import TwitterCard from '~/components/twitter-card.vue'
 export default {
   name: 'Homepage',
   components: {
     GoogleCard,
-    FacebookCard
+    FacebookCard,
+    TwitterCard
   },
   data () {
     return {
@@ -86,7 +89,8 @@ export default {
       metaTitleRules: [v => v.length <= 60 || 'Ideal meta titles are less than 60 characters'],
       metaDescriptionRules: [v => v.length <= 160 || 'Ideal meta descriptions are less than 160 characters'],
       googleSwitch: true,
-      facebookSwitch: true
+      facebookSwitch: true,
+      twitterSwitch: true
     }
   },
   created () {
