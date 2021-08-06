@@ -4,9 +4,9 @@
     <div class="card-twitter-container">
       <v-skeleton-loader type="image" class="twitter-image" />
       <div class="twitter-text">
-        <span class="facebook-title">{{ metaTitle }}</span>
-        <span class="facebook-description">{{ metaDescription }}</span>
-        <span class="twitter-url-title">{{ facebookURL }}</span>
+        <span class="twitter-title">{{ metaTitle }}</span>
+        <span class="twitter-description">{{ metaDescription }}</span>
+        <span class="twitter-url-title">{{ twitterURL }}</span>
       </div>
     </div>
   </v-card>
@@ -18,7 +18,7 @@ export default {
   name: 'TwitterCard',
   data () {
     return {
-      facebookURL: ''
+      twitterURL: ''
     }
   },
   computed: {
@@ -26,16 +26,16 @@ export default {
   },
   watch: {
     metaURL () {
-      this.facebookURLHostName()
+      this.twitterURLHostName()
     }
   },
   mounted () {
-    this.facebookURLHostName()
+    this.twitterURLHostName()
   },
   methods: {
-    facebookURLHostName () {
+    twitterURLHostName () {
       const url = new URL(this.metaURL)
-      this.facebookURL = url.hostname
+      this.twitterURL = url.hostname
     }
   }
 }
@@ -94,7 +94,7 @@ export default {
           letter-spacing: normal;
           overflow: hidden;
         }
-        .facebook-url-title {
+        .twitter-url-title {
           border-collapse: separate;
           color: #606770;
           direction: ltr;
@@ -116,7 +116,7 @@ export default {
           -webkit-border-vertical-spacing: 0px;
           -webkit-font-smoothing: antialiased;
         }
-        .facebook-content {
+        .twitter-content {
           border-collapse: separate;
           color: #4b4f56;
           direction: ltr;
@@ -135,7 +135,7 @@ export default {
           -webkit-border-vertical-spacing: 0px;
           -webkit-font-smoothing: antialiased;
           margin-top: 5px;
-          .facebook-title {
+          .twitter-title {
             margin-top: 5px;
             border-collapse: separate;
             color: #1d2129;
@@ -164,7 +164,7 @@ export default {
             -webkit-border-vertical-spacing: 0px;
             -webkit-font-smoothing: antialiased;
           }
-          .facebook-description {
+          .twitter-description {
             border-collapse: separate;
             color: #606770;
             direction: ltr;
@@ -215,11 +215,11 @@ export default {
         .v-skeleton-loader__image {
         }
       }
-      .facebook-text {
+      .twitter-text {
         border: 1px solid #dadde1;
         border-top: none;
-        .facebook-content {
-          .facebook-title {
+        .twitter-content {
+          .twitter-title {
             font-size: 16px;
             line-height: 20px;
           }
