@@ -79,7 +79,7 @@ export default {
   data () {
     return {
       metaData: {
-        metaTitle: 'Meta Titles | a morsecodemedia tool.',
+        metaTitle: 'Meta Tags | a morsecodemedia tool.',
         metaDescription: 'A page to check character count and preview meta tags in various scenarios.',
         url: 'https://meta-tags.morsecodemedia.com'
       },
