@@ -55,6 +55,9 @@
               ON
             </div>
           </v-card>
+          <v-card class="card">
+          <p>I can am currently working adding additional features and platforms. Please feel free to reach out to me if you have any specific request that I can add to the roadmap. In the meantime, here is another site that does a decent job mockups: <a href="https://admockups.com/" target="_blank">https://admockups.com/</a>.</p>
+          </v-card>
         </v-col>
 
         <v-col md="6">
