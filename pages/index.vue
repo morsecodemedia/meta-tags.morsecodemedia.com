@@ -32,6 +32,21 @@
               @input="updateMetaURL"
             />
           </v-card>
+
+          <v-card class="card">
+            <v-card-subtitle>Code Example</v-card-subtitle>
+            <code>
+              &lt;title&gt;{{ metaData.metaTitle }}&lt;/title&gt; <br>
+              &lt;meta name="description" content="{{ metaData.metaDescription }}"&gt;  <br><br>
+              &lt;meta property="og:title" content="{{ metaData.metaTitle }}"&gt; <br>
+              &lt;meta property="og:description" content="{{ metaData.metaDescription }}"&gt; <br>
+              &lt;meta property="og:url" content="{{ metaData.url }}"&gt; <br><br>
+              &lt;meta name="twitter:title" content="{{ metaData.metaTitle }}"&gt; <br>
+              &lt;meta name="twitter:description" content="{{ metaData.metaDescription }}"&gt; <br>
+              &lt;meta name="twitter:site" content="{{ metaData.url }}"&gt;
+            </code>
+          </v-card>
+
           <v-card class="card">
             Google
             <div class="inline">
@@ -56,7 +71,7 @@
             </div>
           </v-card>
           <v-card class="card">
-          <p>I can am currently working adding additional features and platforms. Please feel free to reach out to me if you have any specific request that I can add to the roadmap. In the meantime, here is another site that does a decent job mockups: <a href="https://admockups.com/" target="_blank">https://admockups.com/</a>.</p>
+            <p>I can am currently working adding additional features and platforms. Please feel free to reach out to me if you have any specific request that I can add to the roadmap. In the meantime, here is another site that does a decent job mockups: <a href="https://admockups.com/" target="_blank">https://admockups.com/</a>.</p>
           </v-card>
         </v-col>
 
