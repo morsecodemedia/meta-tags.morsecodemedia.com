@@ -1,7 +1,10 @@
 <template>
   <v-card class="card card-facebook">
     <v-card-subtitle>Facebook</v-card-subtitle>
-    <v-skeleton-loader type="image" class="facebook-image" />
+    <div
+      class="facebook-image"
+      :style="{ backgroundImage: 'url(' + metaImage + ')' }"
+    />
     <div class="facebook-text">
       <span class="facebook-url-title">{{ facebookURL }}</span>
       <div class="facebook-content">
@@ -22,7 +25,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('meta', ['metaTitle', 'metaDescription', 'metaURL'])
+    ...mapGetters('meta', ['metaTitle', 'metaDescription', 'metaURL', 'metaImage'])
   },
   watch: {
     metaURL () {
@@ -45,11 +48,11 @@ export default {
 .card {
   &.card-facebook {
     .facebook-image {
-      .v-skeleton-loader__image {
-        height: 180px;
-        border-top: 1px solid #dadde1;
-        border-bottom: 1px solid #dadde1;
-      }
+      height: 180px;
+      border: 1px solid #dadde1;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
     }
     .facebook-text {
       padding: 10px 12px;

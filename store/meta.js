@@ -1,7 +1,8 @@
 export const state = () => ({
   metaTitle: '',
   metaDescription: '',
-  metaURL: ''
+  metaURL: '',
+  metaImage: ''
 })
 
 export const mutations = {
@@ -13,6 +14,9 @@ export const mutations = {
   },
   setMetaURL: (state, val) => {
     state.metaURL = val
+  },
+  setMetaImage: (state, val) => {
+    state.metaImage = val
   }
 }
 
@@ -25,5 +29,8 @@ export const getters = {
   },
   metaURL: (state) => {
     return state.metaURL
+  },
+  metaImage: (state) => {
+    return state.metaImage
   }
 }
